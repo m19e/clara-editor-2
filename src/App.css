@@ -1,0 +1,111 @@
+/** biome-ignore-all lint/correctness/noUnknownProperty: <explanation> */
+@import "tailwindcss";
+/* TODO daisyuiが不要になる可能性を念頭に */
+@plugin "daisyui" {
+	exclude: "scrollbar";
+}
+@plugin "tailwind-scrollbar" {
+	nocompatible: true;
+	preferredStrategy: "pseudoelements";
+}
+
+/* FIXME inputの背景色が壊れる */
+/* daisyui.inputの変なbackgroundを消す */
+input {
+	background-color: transparent;
+	--fx-noise: none;
+	/* --noise: none; */
+}
+
+/* Font-Face */
+@font-face {
+	font-family: "MyEllipsis";
+	font-weight: normal;
+	src: local("YuMin-Medium"), local("YuMincho-Regular");
+	unicode-range: U+2026;
+}
+
+@font-face {
+	font-family: "MyEllipsis";
+	font-weight: bold;
+	src: local("YuMin-Demibold"), local("YuMincho-Demibold");
+	unicode-range: U+2026;
+}
+
+@font-face {
+	font-family: "MyBoxDrawings";
+	font-weight: normal;
+	src: local("YuMin-Medium"), local("YuMincho-Regular");
+	unicode-range: U+203C, U+2047, U+2048, U+2049, U+2500;
+}
+
+@font-face {
+	font-family: "MyBoxDrawings";
+	font-weight: bold;
+	src: local("YuMin-Demibold"), local("YuMincho-Demibold");
+	unicode-range: U+203C, U+2047, U+2048, U+2049, U+2500;
+}
+
+@font-face {
+	font-family: "MyYuGothicM";
+	font-weight: normal;
+	src:
+		local("YuGothic-Medium"), local("Yu Gothic Medium"),
+		local("YuGothic-Regular");
+}
+
+@font-face {
+	font-family: "MyYuGothicM";
+	font-weight: bold;
+	src: local("YuGothic-Bold"), local("Yu Gothic");
+}
+
+/* Font-Set */
+.mincho {
+	font-family:
+		MyEllipsis, MyBoxDrawings, "Times New Roman", TimesNewRoman, "Yu Mincho",
+		YuMincho, serif;
+}
+
+.gothic {
+	font-family:
+		MyEllipsis, MyBoxDrawings, "Helvetica Neue", Helvetica, Arial, "MyYuGothicM",
+		YuGothic, sans-serif;
+}
+
+@layer utilities {
+	.vertical {
+		writing-mode: vertical-rl;
+	}
+
+	.text-upright {
+		text-orientation: upright;
+	}
+
+	.nested-group:hover .ng-hover\:opacity-100 {
+		@apply opacity-100;
+	}
+}
+
+.text-combined {
+	text-combine-upright: all;
+}
+
+html[data-theme="light"] > .mincho > .vertical {
+	font-weight: 600;
+}
+
+html[data-theme="light"] .text-base-content ::selection {
+	color: #f9f9fa;
+	background-color: #5f626a;
+}
+
+html[data-theme="dark"] .text-base-content ::selection {
+	color: #44454a;
+	background-color: #bec1c6;
+}
+
+.editor-scroll {
+	@apply scrollbar-thin scrollbar-thumb-rounded-full;
+	@apply scrollbar-track-transparent scrollbar-thumb-transparent hover:scrollbar-thumb-[#909090];
+}
