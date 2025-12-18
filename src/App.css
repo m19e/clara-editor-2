@@ -9,7 +9,6 @@
 	preferredStrategy: "pseudoelements";
 }
 
-/* FIXME inputの背景色が壊れる */
 /* daisyui.inputの変なbackgroundを消す */
 input {
 	background-color: transparent;
