@@ -4,7 +4,6 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import electron from "vite-plugin-electron/simple";
 
-// TODO activate Tailwind CSS
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
