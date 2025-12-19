@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/correctness/noUnknownProperty: <explanation> */
+/** biome-ignore-all lint/correctness/noUnknownProperty: <> */
 @import "tailwindcss";
 /* TODO daisyuiが不要になる可能性を念頭に */
 @plugin "daisyui" {
