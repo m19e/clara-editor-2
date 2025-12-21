@@ -146,4 +146,4 @@ export const useKeybind = (editor: LexicalEditor) => {
 			),
 		);
 	}, [editor]);
-}
+};
