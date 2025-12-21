@@ -6,29 +6,8 @@ import {
 	$isTextNode,
 } from "lexical";
 
-// type TextPointType = {
-// 	_selection: RangeSelection;
-// 	getNode: () => TextNode;
-// 	is: (point: PointType) => boolean;
-// 	isBefore: (point: PointType) => boolean;
-// 	key: NodeKey;
-// 	offset: number;
-// 	set: (key: NodeKey, offset: number, type: "text" | "element") => void;
-// 	type: "text";
-// };
-
-// type ElementPointType = {
-// 	_selection: RangeSelection;
-// 	getNode: () => ElementNode;
-// 	is: (point: PointType) => boolean;
-// 	isBefore: (point: PointType) => boolean;
-// 	key: NodeKey;
-// 	offset: number;
-// 	set: (key: NodeKey, offset: number, type: "text" | "element") => void;
-// 	type: "element";
-// };
-
-// type PointType = TextPointType | ElementPointType;
+// TODO Remove commented
+// TODO arrow function
 
 const getDOMSelection = (): Selection | null => window.getSelection();
 
@@ -152,6 +131,14 @@ export function $moveCaretSelection(
 		isBackward,
 		granularity,
 	);
+}
+
+export function $moveWord(
+	selection: RangeSelection,
+	isHoldingShift: boolean,
+	isBackward: boolean,
+): void {
+	$moveCaretSelection(selection, isHoldingShift, isBackward, "word");
 }
 
 export function $moveLine(
