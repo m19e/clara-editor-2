@@ -21,7 +21,8 @@ import { useLayoutEffect } from "react";
 import { onPasteForRichText } from "./lib/clipboard";
 import { $moveLine } from "./lib/selection";
 
-export function useKeybind(editor: LexicalEditor): void {
+// TODO arrow function
+export const useKeybind = (editor: LexicalEditor) => {
 	useLayoutEffect(() => {
 		return mergeRegister(
 			// bind arrow key to WYSIWYG caret move
