@@ -5,7 +5,6 @@ import {
 import { Editor } from "./components/Editor";
 
 // Todo
-// TODO jotai入れる
 
 // Done
 // TODO biomeでclassNameソートできるか試す
@@ -14,6 +13,7 @@ import { Editor } from "./components/Editor";
 // TODO plugins/useKeybind実装
 // TODO lexicalの縦書き動作確認
 // TODO ビルド検証
+// TODO jotai入れる
 function App() {
 	const initialConfig: InitialConfigType = {
 		namespace: "ClaraEditor2",
