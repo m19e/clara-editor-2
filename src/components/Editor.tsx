@@ -18,6 +18,8 @@ const Placeholder = () => {
 
 // Todo
 // TODO jotaiで本文管理
+// TODO 自動保存(UIだけ)
+// TODO 自動保存(処理)
 
 // Done
 // TODO tailwind-scrollbar試す
