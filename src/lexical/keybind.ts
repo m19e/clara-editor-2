@@ -21,7 +21,6 @@ import { useLayoutEffect } from "react";
 import { onPasteForRichText } from "./lib/clipboard";
 import { $moveLine } from "./lib/selection";
 
-// TODO arrow function
 export const useKeybind = (editor: LexicalEditor) => {
 	useLayoutEffect(() => {
 		return mergeRegister(
