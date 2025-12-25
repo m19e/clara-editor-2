@@ -18,12 +18,15 @@
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+
+		// Alias
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"common/*": ["common/*"]
+		}
 	},
 	"include": ["src", "electron"],
-	"references": [{ "path": "./tsconfig.node.json" }],
-	"baseUrl": ".",
-	"paths": {
-		"@/*": ["src/*"]
-	}
+	"references": [{ "path": "./tsconfig.node.json" }]
 }
