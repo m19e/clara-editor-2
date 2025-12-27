@@ -6,7 +6,6 @@ import {
 	$isTextNode,
 } from "lexical";
 
-// TODO Remove commented
 // TODO arrow function
 
 const getDOMSelection = (): Selection | null => window.getSelection();
