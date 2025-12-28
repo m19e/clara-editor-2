@@ -3,6 +3,7 @@ import {
 	LexicalComposer,
 } from "@lexical/react/LexicalComposer";
 import { Editor } from "./components/Editor";
+import { MetaHead } from "./components/MetaHead";
 
 // Todo
 
@@ -22,6 +23,7 @@ function App() {
 
 	return (
 		<LexicalComposer initialConfig={initialConfig}>
+			<MetaHead />
 			<Editor />
 		</LexicalComposer>
 	);
