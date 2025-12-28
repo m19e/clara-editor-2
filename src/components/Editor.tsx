@@ -5,8 +5,8 @@ import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { PlainTextPlugin } from "@lexical/react/LexicalPlainTextPlugin";
 import type { WheelEvent } from "react";
 import { useEffect, useRef } from "react";
-
 import { InitPlugin } from "../lexical/plugins/InitPlugin";
+import { AutoSavePlugin } from "../lexical/plugins/NewAutoSavePlugin";
 
 const Placeholder = () => {
 	return (
@@ -73,6 +73,7 @@ export const Editor = () => {
 					<div className="flex-1"></div>
 				</div>
 			</div>
+			<AutoSavePlugin />
 			<AutoFocusPlugin />
 			<HistoryPlugin />
 			<InitPlugin />
