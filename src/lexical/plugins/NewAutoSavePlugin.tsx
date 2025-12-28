@@ -4,7 +4,7 @@ import type { EditorState } from "lexical";
 import { $getRoot } from "lexical";
 import { useCallback, useRef } from "react";
 
-import { isSavedAtom } from "../../store/atoms";
+import { isSavedAtom } from "@/store/atoms";
 
 // TODO refactor: extract to utils
 const getTextFromEditorState = (editorState: EditorState) => {
