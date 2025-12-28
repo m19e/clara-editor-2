@@ -15,6 +15,9 @@ import { MetaHead } from "./components/MetaHead";
 // TODO lexicalの縦書き動作確認
 // TODO ビルド検証
 // TODO jotai入れる
+// TODO appタイトル更新
+// TODO 自動保存(挙動だけ)
+// TODO タイトルのマーカー表示
 function App() {
 	const initialConfig: InitialConfigType = {
 		namespace: "ClaraEditor2",
