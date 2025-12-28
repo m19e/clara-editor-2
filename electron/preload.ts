@@ -1,6 +1,6 @@
 import { contextBridge, ipcRenderer } from "electron";
 import Store from "electron-store";
-
+// main側のpath指定はaliasにしない(ビルドケア)
 import { schema } from "../common/consts";
 import type { Schema } from "../common/types";
 
