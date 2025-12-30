@@ -6,6 +6,10 @@ import { Editor } from "./components/Editor";
 import { MetaHead } from "./components/MetaHead";
 
 // Todo
+// TODO src以下を相対パスに統一する
+// TODO 見えるとこの機能から作ってく
+// TODO >書式設定(フォントサイズ、行間、字数)
+// TODO >フォント設定
 
 // Done
 // TODO biomeでclassNameソートできるか試す
