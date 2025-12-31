@@ -2,8 +2,8 @@ import {
 	type InitialConfigType,
 	LexicalComposer,
 } from "@lexical/react/LexicalComposer";
-import { Editor } from "./components/Editor";
-import { MetaHead } from "./components/MetaHead";
+import { Editor } from "@/components/Editor";
+import { MetaHead } from "@/components/MetaHead";
 
 // Todo
 // TODO src以下を相対パスに統一する
