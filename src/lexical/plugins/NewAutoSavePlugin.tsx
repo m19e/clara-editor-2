@@ -20,7 +20,7 @@ const debounce = <T extends (...args: any[]) => void>(fn: T, wait: number) => {
 };
 
 // TODO rename
-export const AutoSavePlugin = () => {
+export const NewAutoSavePlugin = () => {
 	const setIsSaved = useSetAtom(isSavedAtom);
 
 	const prevSavedTextRef = useRef<string | null>(null);
