@@ -10,27 +10,27 @@ import {
 
 const getDOMSelection = (): Selection | null => window.getSelection();
 
-function $moveNativeSelection(
+const $moveNativeSelection = (
 	domSelection: Selection,
 	alter: "move" | "extend",
 	direction: "backward" | "forward" | "left" | "right",
 	granularity: "character" | "word" | "lineboundary" | "line",
-): void {
+) => {
 	domSelection.modify(alter, direction, granularity);
-}
+};
 
-function $setPointValues(
+const $setPointValues = (
 	point: PointType,
 	key: NodeKey,
 	offset: number,
 	type: "text" | "element",
-): void {
+) => {
 	point.key = key;
 	point.offset = offset;
 	point.type = type;
-}
+};
 
-function $swapPoints(selection: RangeSelection): void {
+const $swapPoints = (selection: RangeSelection) => {
 	const focus = selection.focus;
 	const anchor = selection.anchor;
 	const anchorKey = anchor.key;
@@ -40,14 +40,14 @@ function $swapPoints(selection: RangeSelection): void {
 	$setPointValues(anchor, focus.key, focus.offset, focus.type);
 	$setPointValues(focus, anchorKey, anchorOffset, anchorType);
 	selection._cachedNodes = null;
-}
+};
 
-function $modifyLineSelection(
+const $modifyLineSelection = (
 	selection: RangeSelection,
 	alter: "move" | "extend",
 	isBackward: boolean,
 	granularity: "character" | "word" | "lineboundary" | "line",
-): void {
+) => {
 	const focus = selection.focus;
 	const anchor = selection.anchor;
 	const collapse = alter === "move";
@@ -116,34 +116,34 @@ function $modifyLineSelection(
 			$swapPoints(selection);
 		}
 	}
-}
+};
 
-export function $moveCaretSelection(
+export const $moveCaretSelection = (
 	selection: RangeSelection,
 	isHoldingShift: boolean,
 	isBackward: boolean,
 	granularity: "character" | "word" | "lineboundary" | "line",
-): void {
+) => {
 	$modifyLineSelection(
 		selection,
 		isHoldingShift ? "extend" : "move",
 		isBackward,
 		granularity,
 	);
-}
+};
 
-export function $moveWord(
+export const $moveWord = (
 	selection: RangeSelection,
 	isHoldingShift: boolean,
 	isBackward: boolean,
-): void {
+) => {
 	$moveCaretSelection(selection, isHoldingShift, isBackward, "word");
-}
+};
 
-export function $moveLine(
+export const $moveLine = (
 	selection: RangeSelection,
 	isHoldingShift: boolean,
 	isBackward: boolean,
-): void {
+) => {
 	$moveCaretSelection(selection, isHoldingShift, isBackward, "line");
-}
+};
