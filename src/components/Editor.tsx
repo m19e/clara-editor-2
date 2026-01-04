@@ -20,7 +20,6 @@ const Placeholder = () => {
 // TODO 自動保存(処理)
 
 // Done
-// TODO スクロール表示不備を検証
 // TODO 自動保存(挙動だけ)
 export const Editor = () => {
 	const containerRef = useRef<HTMLDivElement | null>(null);
