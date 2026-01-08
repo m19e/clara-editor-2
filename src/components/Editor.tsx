@@ -18,6 +18,11 @@ const Placeholder = () => {
 
 // Todo
 // TODO 自動保存(処理)
+// TODO ドロワーで書式設定
+// TODO 1行の字数
+// TODO 行間
+// TODO フォントサイズ
+// TODO フォント
 
 // Done
 export const Editor = () => {
