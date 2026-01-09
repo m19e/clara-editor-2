@@ -6,8 +6,6 @@ import {
 	$isTextNode,
 } from "lexical";
 
-// TODO arrow function
-
 const getDOMSelection = (): Selection | null => window.getSelection();
 
 const $moveNativeSelection = (
