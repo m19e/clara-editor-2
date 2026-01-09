@@ -31,7 +31,6 @@ contextBridge.exposeInMainWorld("ipcRenderer", {
 
 const store = new Store<Schema>({ schema });
 
-// TODO electron-store用のAPI生やす
 contextBridge.exposeInMainWorld("store", {
 	get<K extends keyof Schema>(key: K): Schema[K] | undefined {
 		return store.get(key);
