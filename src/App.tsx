@@ -12,7 +12,6 @@ import { MetaHead } from "@/components/MetaHead";
 // TODO >フォント設定
 
 // Done
-// TODO biomeでclassNameソートできるか試す
 // TODO daisyuiのコンポーネント並べてみる
 // TODO lexical-composerでラップ
 // TODO plugins/useKeybind実装
