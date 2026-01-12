@@ -12,7 +12,6 @@ import { MetaHead } from "@/components/MetaHead";
 // TODO >フォント設定
 
 // Done
-// TODO lexical-composerでラップ
 // TODO plugins/useKeybind実装
 // TODO lexicalの縦書き動作確認
 // TODO ビルド検証
