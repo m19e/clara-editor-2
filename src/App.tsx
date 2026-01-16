@@ -12,7 +12,6 @@ import { MetaHead } from "@/components/MetaHead";
 // TODO >フォント設定
 
 // Done
-// TODO ビルド検証
 // TODO jotai入れる
 // TODO appタイトル更新
 // TODO 自動保存(挙動だけ)
