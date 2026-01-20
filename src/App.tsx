@@ -12,7 +12,6 @@ import { MetaHead } from "@/components/MetaHead";
 // TODO >フォント設定
 
 // Done
-// TODO 自動保存(挙動だけ)
 // TODO タイトルのマーカー表示
 function App() {
 	const initialConfig: InitialConfigType = {
