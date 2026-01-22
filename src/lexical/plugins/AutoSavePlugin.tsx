@@ -6,8 +6,8 @@ import type { EditorState } from "lexical";
 import { $getRoot } from "lexical";
 import { useEffect, useRef } from "react";
 
-import { IS_PROD } from "../../consts";
-import { draftFilepathAtom, isSavedAtom } from "../../store/atoms";
+import { IS_PROD } from "@/consts";
+import { draftFilepathAtom, isSavedAtom } from "@/store/atoms";
 
 const getTextFromEditorState = (editorState: EditorState) => {
 	return editorState.read(() => $getRoot().getTextContent());
@@ -30,6 +30,7 @@ const saveDraft = async (
 	}
 };
 
+// TODO relative path
 export const AutoSavePlugin = (): null => {
 	const [editor] = useLexicalComposerContext();
 	const [draftPath, _setDraftPath] = useAtom(draftFilepathAtom);
