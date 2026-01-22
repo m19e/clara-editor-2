@@ -1,10 +1,12 @@
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import { useEffect } from "react";
 
-import { MOCK_TEXT_CONTENT } from "../../consts";
+import { MOCK_TEXT_CONTENT } from "@/consts";
+
 import { useKeybind } from "../keybind";
 import { $setTextContent } from "../lib/text";
 
+// TODO relative path import
 export const InitPlugin = () => {
 	const [editor] = useLexicalComposerContext();
 
