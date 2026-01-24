@@ -3,10 +3,13 @@ import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { PlainTextPlugin } from "@lexical/react/LexicalPlainTextPlugin";
+import { useAtomValue } from "jotai";
 import type { WheelEvent } from "react";
 import { useEffect, useRef } from "react";
-import { InitPlugin } from "../lexical/plugins/InitPlugin";
-import { NewAutoSavePlugin } from "../lexical/plugins/NewAutoSavePlugin";
+
+import { InitPlugin } from "@/lexical/plugins/InitPlugin";
+import { NewAutoSavePlugin } from "@/lexical/plugins/NewAutoSavePlugin";
+import { fontSizeAtom, lineHeightAtom, lineWordsAtom } from "@/store/atoms";
 
 const Placeholder = () => {
 	return (
@@ -26,6 +29,10 @@ const Placeholder = () => {
 
 // Done
 export const Editor = () => {
+	const _lw = useAtomValue(lineWordsAtom);
+	const _lh = useAtomValue(lineHeightAtom);
+	const _fs = useAtomValue(fontSizeAtom);
+
 	const containerRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
