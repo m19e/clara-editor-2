@@ -30,7 +30,6 @@ const saveDraft = async (
 	}
 };
 
-// TODO relative path
 export const AutoSavePlugin = (): null => {
 	const [editor] = useLexicalComposerContext();
 	const [draftPath, _setDraftPath] = useAtom(draftFilepathAtom);
