@@ -48,6 +48,19 @@ export const Editor = () => {
 		}
 	}, []);
 
+	// useEffect(() => {
+	// 	if (containerRef.current) {
+	// 		containerRef.current.setAttribute(
+	// 			"style",
+	// 			`
+	// 		  height: calc(${lw}em + 7rem);
+	// 		  line-height: ${lh};
+	// 		  font-size: ${fs}rem;
+	// 		  `,
+	// 		);
+	// 	}
+	// }, [fs, lh, lw]);
+
 	const handleWheel = (e: WheelEvent<HTMLElement>) => {
 		e.preventDefault();
 		if (containerRef.current) {
